@@ -1,0 +1,245 @@
+
+{%  block content %}
+
+
+
+{% load static%}
+
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+<title>Vakilline</title>
+
+<!-- Bootstrap core CSS -->
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="{% static 'assets/css/fontawesome.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/templatemo-edu-meeting.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/lightbox.css'%}">
+<link rel="icon" type="image/x-icon" href="{% static 'logo/logogo.png'%}">
+
+<style>
+
+.logo-imgg{
+width: 25%;
+border-top: 20px;
+
+
+}
+
+</style>
+<header class="header-area header-sticky background-header ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav" >
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url 'home'%}" > <img class="logo-imgg" src="{% static 'logo/Capture.png'%}"> </a>
+
+					
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+
+                    <ul class="nav">
+                        
+                        
+                        <li ><a href="{% url 'lawyers'%}" >وکلا</a></li>  
+                       
+                        <li  class="has-sub">
+                            <a  href="javascript:void(0)">صفحات</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'social'%}">پرسش و پاسخ</a></li>
+                                <li><a href="">بلاگ</a></li>
+                                <li><a href="">درخواست کارشناس رسمی دادگستری</a></li>
+                                <li><a href="{% url 'addlawyer'%}">add lawyer</a></li>
+                                <li><a href="/order/{{user.username}}">My orders</a></li>
+                            </ul>
+                        </li>
+                    
+                       
+                        <li class="scroll-to-section"><a   href="">وکالت آنلاین</a></li>
+
+
+                        
+                       
+                        {% if request.user.is_authenticated%}
+                        <li class="has-sub">
+                            <a href="javascript:void(0)" > {{user.first_name}} </a>
+                            <ul class="sub-menu">
+                                <li><a href="{%url 'editprofile'%}">حساب کاربری</a></li>
+                                
+                                <li><a href="{% url 'userorders'%}">سفارشات من</a></li>
+                                <li><a href="/order/{{user.username}}">My orders</a></li>
+                                <li><a href="{% url 'logout'%}">خروج</a></li>
+                            </ul>
+                        </li>
+                        {%else%}
+                        <li>
+                            
+                            
+                            
+                           
+                            <a href="{% url 'login'%}">ورود</a>
+                            
+
+
+                        </li>
+                        {%endif%}
+                        <li ><a  href="{% url 'home'%}" class="active">صفحه اصلی</a></li>
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+
+
+
+
+
+
+
+
+<head>
+
+    <style>
+    *.all{padding-top: 150px;}
+    body {
+      margin: auto;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: auto;
+      color: black;
+      
+      background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+      animation: gradient 15s ease infinite;
+      background-size: 400% 400%;
+      background-attachment: fixed;
+    }
+    
+    @keyframes gradient {
+      0% {
+          background-position: 0% 0%;
+      }
+      50% {
+          background-position: 100% 100%;
+      }
+      100% {
+          background-position: 0% 0%;
+      }
+    }
+    
+    .content-cards {
+        color: black;
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    
+    .card {
+      text-align: right;
+        color: wheat;
+    background-color:#4d4d4f;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    padding: 1em;
+    position: relative;
+    color: wheat;
+    width: 18em;
+    height: 24em;
+    overflow: auto;
+    }
+    
+    .card:hover {
+    transform:rotate(3deg);
+    cursor: pointer;
+    transition-duration: 0.5s;
+    }
+    
+    .card > .head {
+        color: rgb(36, 36, 36);
+    border-bottom: 1.5px solid gray;
+    }
+    
+    .card > .head > .title {
+        color: rgb(36, 36, 36);
+    margin: 0;
+    }
+    
+    .card > .head > .subtitle {
+        color: rgb(36, 36, 36);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    }
+    
+    .card > .head > .title {
+    margin: 0;
+    }
+    
+    .card > .body > .content {color: rgb(36, 36, 36);}
+    </style>
+    
+    </head>
+    <div class="all">
+    <!-- partial:index.partial.html -->
+
+    <body>
+      
+      <div class="content-cards">
+        
+        {% for order in orders%}
+        <div class="card">
+          <br>
+          <div class="head">
+           
+            <h5 class="title" style="font-size:15px ; color: rgb(156, 146, 133);  ">  نام کاربری مشتری : <span style="font-size: 15px; text-align:left"> {{order.user}}</span></h5>
+            <h5 class="title" style="font-size:15px ; color: rgb(156, 146, 133);  ">  نام درخواست : <span style="font-size: 15px; text-align:left"> {{order.name}}</span></h5><br>
+            <h5 class="title" style="font-size:15px ; color: rgb(213, 199, 181);  ">  نام وکیل : <a href="" style="font-size: 15px; text-align:left"> {{order.chosenlawyer}}</a></h5>
+       
+          
+            <br>
+          </div>
+          <div class="body">
+            :شرح درخواست
+            <p class="content" style="font-size:15px ; color: rgb(213, 199, 181);  ">{{order.description}}</p>
+            <hr>
+            :شماره تماس
+            <br>
+            <a>{{order.phonenum}}</a>
+            <hr><div style="font-size:10px ;">
+            {{order.created}}<p></p>
+            {%if order.is_fulfilled %} انجام شده 
+            {%else%} انجام نشده
+            {%endif%}
+        </div>
+          </div>
+        </div>
+        {%endfor%}
+     
+      </div>
+    </body>
+
+</div>
+      
+ 
+    
+    
+
+
+
+
+
+
+
+{% endblock %}

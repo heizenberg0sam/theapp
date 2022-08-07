@@ -1,0 +1,552 @@
+
+
+{% load static%}
+{%  block content %}
+
+{% include 'navbar.html'%}
+{%include 'support.html'%}
+{%include 'orderbutton.html'%}
+
+
+
+<section class="section main-banner" id="top" data-section="section1">
+	<video autoplay muted loop id="bg-video">
+		<source src="{% static 'assets/images/course-video.mp4'%}" type="video/mp4" />
+	</video>
+
+
+	<div class="video-overlay header-text">
+		<div class="container" style="direction:rtl">
+		  <div class="row">
+			<div class="col-lg-12">
+			  <div class="caption" style="  text-align: right;" >
+			
+			<h2>به وکیل لاین خوش آمدید</h2>
+			<p>راهکار عادلانه حل مشکلات و نیازهای حقوقی شما</p>
+
+		</div>
+			</div>
+		  </div>
+		</div>
+	</div>
+</section>
+<section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+          
+            <div class="item" >
+              <div class="icon" >
+                <img src="{% static 'assets/images/service-icon-01.png'%}" alt="" >
+              </div>
+              <div class="down-content">
+                <h4>مشاوره تلفنی تخصصی</h4>
+                <p> درخواست مشاوره شما ابتدا توسط کارشناسان مجموعه برسسی میشود تا شما به متخصص مربوطه در زمینه مورد سوال خود متصل شوید و شرح درخواست بررسی میشود<p/>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{% static 'assets/images/service-icon-02.png'%}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>تنظیم لایحه</h4>
+                <p>ایحه قضایی یا لایحه دفاعیه به متن مکتوبی گفته می شود که هر یک از طرفین دعوا می توانند با تنظیم و ارائه آن به دادگاه تمامی اطلاعات و جزییات مرتبط با موضوع را به اطلاع دادگاه برسانند </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{% static 'assets/images/service-icon-03.png'%}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>ضمانت بازگشت وجه</h4>
+                <p>اگر فردی به هر دلیلی از خدمات ما ناراضی بود، هزینه پرداختی را برای او برمیگردانیم تا هم ما حس خوبی از کار خود داشته باشیم و هم اعضای محترم با خیال راحت سفارش خود را انجام دهند</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{% static 'assets/images/service-icon-02.png'%}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>وکالت آنلاین</h4>
+                <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{% static 'assets/images/service-icon-03.png'%}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>پشتیبانی 24 ساعته</h4>
+                <p> در صورت وجود هرگونه سوال یا ابهامی با یکی از روش های زیر با ما در ارتباط باشید
+                  عزیزان میباشن مشاوران ما به صورت 24 ساعته پاات شماات شماسخگوی سوالات شما عزیزان میباشند</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section class="upcoming-meetings" id="meetings" style="  text-align: right;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>موضوعات</h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="categories" style="  text-align: right;">
+            <h4>رویه وکالت آنلاین</h4>
+            <ul>
+              <p><li><a href="#">دریافت مشاوره اولیه ی رایگان</a></li></p>
+             <p> <li><a href="#">ارسال رو نوشت پرونده</a></li></p>
+              <p><li><a href="#">عقد قرارداد</a></li></p>
+             <p> <li><a href="#">دریافت مشاوره و لایحه و تنظیم متون</a></li></p>
+             
+            </ul>
+            <div class="main-button-red">
+              <a href="">وکالت آنلاین</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                    
+                  </div>
+                  <a href="{% url 'lawyers'%}"><img src="{% static 'assets/images/meeting-01.jpg'%}" alt="New Lecturer Meeting"></a>
+                </div>
+                <div class="down-content">
+                  <div class="date">
+                    <h6> 10<span>متخصص</span></h6>
+                  </div>
+                  <a href="{% url 'lawyers'%}"><h4>خانواده</h4></a>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                   
+                  </div>
+                  <a href="{% url 'lawyers'%}"><img src="{% static 'assets/images/meeting-02.jpg'%}" alt="Online Teaching"></a>
+                </div>
+                <div class="down-content" >
+                  <div class="date">
+                    <h6> 13<span>متخصص</span></h6>
+                  </div>
+                  <a href="{% url 'lawyers'%}"><h4>کیفری</h4></a>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                  
+                  </div>
+                  <a href="{% url 'lawyers'%}"><img src="{% static 'assets/images/meeting-03.jpg'%}" alt="Higher Education"></a>
+                </div>
+                <div class="down-content">
+                  <div class="date">
+                    <h6> 6<span>متخصص</span></h6>
+                  </div>
+                  <a href="{% url 'lawyers'%}"><h4>قرار داد ها</h4></a>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price">
+                    
+                  </div>
+                  <a href="{% url 'lawyers'%}"><img src="{% static 'assets/images/meeting-04.jpg'%}" alt="Student Training"></a>
+                </div>
+                <div class="down-content">
+                  <div class="date">
+                    <h6> 10<span>متخصص</span></h6>
+                  </div>
+                  <a href="{% url 'lawyers'%}"><h4>املاک</h4></a>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="apply-now" id="apply" style="  text-align: right;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>وکالت آنلاین چیست؟</h3>
+                <p>در تمامی مراحل پرونده بهترین متخصصین و مشاوران به صورت آنلاین در کنار شما خواهند بود</p>
+                <div class="main-button-red">
+                  <div class="scroll-to-section"><a href="#contact">اطلاعات بیشتر</a></div>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>چرا وکالت آنلاین؟</h3>
+                <p>چندیدن متخصص و مشاور در خلال پرونده مشگل گشا خواهند بود و هزینه های بسیار سبک!</p>
+                <div class="main-button-yellow">
+                  <div class="scroll-to-section"><a href="#contact">ثبت درخواست وکالت آنلاین</a></div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="accordions is-first-expanded">
+            <article class="accordion">
+              <h2>وکالت آنلاین</h2>
+                <div class="accordion-head">
+                    <span>دریافت مشاوره اولیه ی رایگان</span>
+
+
+
+                  
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>پس از ساخت حساب کاربری و تکمیل فرم وکالت آنلاین مشاوران ما با شما تماس میگیرند تا فرایند وکالت آنلاین به بهترین شکل صورت پذیرد سپس شما  با تکمیل فرم های ذیل از خدمات مشاوره ی انلاین و .. بهره مند میشوید </p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>ارسال رو نوشت پرونده</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>پس از ثبت اولیه ی درخواست وکالت انلاین شما باید رونوشت پرونده ی خودرا همراه با اسناد مربوطه آپلود کنید و سپس متخصص مربوطه را انتخاب کنید تا پرونده به بهترین شکل پیش برود</p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>عقد قرارداد</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>پس از مطالعه ی پرونده توسط متخصص مربوطه و مشاوران حقوقی حق الوکاله در قابل قرارداغد برای شما ارسال میشود و سپس پس از تایید و عقد وکالت پرونده ی شما از سر گرفته میشود</p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion last-accordion">
+                <div class="accordion-head">
+                    <span>دریافت مشاوره و لایحه و تنظیم متون</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>در تمامی مراحل پرونده در کنار شما هستیم و وکالت در قالب لایحه و متون حقیقی انجام میپذیرد</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-courses" id="courses" style="  text-align: right;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>مجرب ترین متخصصان مجموعه</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-courses-item owl-carousel">
+            <div class="item">
+              <img src="{% static 'assets/images/course-01.jpg'%}" alt="Course One">
+              <div class="down-content">
+                <h4>Harvey Spector</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>وکیل پایه یک دادگستری</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static 'assets/images/course-02.jpg'%}" alt="Course Two">
+              <div class="down-content">
+                <h4>Law by mike</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>کارشناس حقوقی</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static 'assets/images/course-03.jpg'%}" alt="">
+              <div class="down-content">
+                <h4>Saul Goodman</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>وکیل پایه یک دادگستری</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static 'assets/images/course-04.jpg'%}" alt="">
+              <div class="down-content">
+                <h4>Chelsea Dickerson</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>وکیل پایه یک دادگستری</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static 'assets/images/course-01.jpg'%}" alt="">
+              <div class="down-content">
+                <h4>Harvey Speector</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>مشاور حقوقی</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static 'assets/images/course-02.jpg'%}" alt="">
+              <div class="down-content">
+                <h4>Law by Mike</h4>
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>کارشناس حقوقی</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="our-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="count-area-content percentage">
+                
+                <div class="count-title"><h3>در مورد وکیللاین</h3></div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content percentage">
+                    <div class="count-digit">94</div>
+                    <div class="count-title">مشاوره موفق</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">126</div>
+                    <div class="count-title">متخصص و مشاور مجرب</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content new-students">
+                    <div class="count-digit">2345</div>
+                    <div class="count-title"> موکل راضی</div>
+                  </div>
+                </div> 
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">32</div>
+                    <div class="count-title">شهر فعلایت</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="col-lg-6 align-self-center">
+          
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2022 Ashkan Samadian All Rights Reserved. 
+          <br>Design: <a href="" target="_parent" title="free css templates">...</a></p>
+    </div>
+  </section>
+  
+  
+
+
+
+
+<script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/isotope.min.js'%} "></script>
+    <script src="{% static 'assets/js/owl-carousel.js'%} "></script>
+    <script src="{% static 'assets/js/lightbox.js'%} "></script>
+    <script src="{% static 'assets/js/tabs.js'%} "></script>
+    <script src="{% static 'assets/js/video.js'%} "></script>
+    <script src="{% static 'assets/js/slick-slider.js'%} "></script>
+    <script src="{% static 'assets/js/custom.js'%} "></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+
+{%  endblock %}
+
+
+
+

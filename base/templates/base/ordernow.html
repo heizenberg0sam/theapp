@@ -1,0 +1,100 @@
+{%extends 'main-forms.html'%}
+{% load static%}
+{%  block content %}
+
+
+
+
+
+
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      {% if request.user.is_authenticated%}
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>درخواست</span>
+            <span>مشاوره</span>
+          </div>
+          <div class="app-contact">شماره تماس : 021 999 2222</div>
+        </div>
+        <!-- ****************************************************************************-->
+        <form method="POST" id="contact" action="">
+          {%csrf_token%}
+        <div class="screen-body-item">
+          <div class="app-form">
+            <div class="app-form-group">
+              
+              <input type="text" name="name" maxlength="200" required=""  id="id_name" class="app-form-control" placeholder="نام و نام خانوادگی">
+            </div>
+            <div class="app-form-group">
+              
+              <input type="number" name="phonenum" maxlength="50" required="" id="id_phonenum" placeholder="شماره تماس" class="app-form-control">
+            </div>
+
+            <div class="app-form-group">
+              
+              <label style="color:rgba(255, 255, 255, 0.3) ;" class="app-form-control">زمان مشاوره</label>
+           <input type="time"  name="time" id="id_time" class="app-form-control" >
+            </div>
+
+
+
+            <div class="app-form-group">
+              
+              <select name="chosenlawyer" required="" id="id_chosenlawyer" class="app-form-control-select">
+                                  
+                <option value="" selected="">وکیل مورد نظر</option>
+                  {% for lawyer in lawyers%}
+                <option value="{{lawyer.id}}">{{lawyer.name}}</option>
+                  {%endfor%}
+            </div>
+            <div class="app-form-group message">
+              
+              <textarea class="app-form-control" name="description" cols="40" rows="10" id="id_description" placeholder="خلاصه درخواست مشاوره "></textarea>
+            </div>
+            <div class="app-form-group buttons">
+              <button class="app-form-button"><a style="text-decoration:none; color:#ea1d6f" href="{% url 'home'%}">بازگشت</a></button>
+              <button type="submit" class="app-form-button" > ثبت درخواست</button>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+      {%else%}
+      
+        <div class="container">
+          <div class="screen" style="height: 250px;">
+      <div class="app-title">
+        <span><p>ابتدا وارد حساب کاربری خود شوید</p></span>
+       
+         <a class="app-form-button" href="{%url 'login'%}"> ورود یا ثبت نام</a>
+      </div>
+      
+    </div></div>
+      {%endif%}
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

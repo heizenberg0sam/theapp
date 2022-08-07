@@ -1,0 +1,89 @@
+{%load static%}
+{%  block content %}
+{% include 'navbar.html'%}
+
+
+<section class="meetings-page" id="meetings" style="text-align: right;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="meeting-single-item">
+                <div class="thumb">
+       
+             
+                  <a href="">
+                    {% if lawyer.id == 1%}
+                    <img src="{% static 'assets/images/single-meeting.jpeg'%}" alt="">
+                    {%else%}
+                    <img src="{% static 'assets/images/lawyers/lawyer5.jpg' %}" alt="">
+                    {%endif%}
+                
+                
+                </a>
+                </div>
+                <div class="down-content">
+                  <a href=""><h4>{{lawyer.name}}</h4></a>
+                  <p>آدرس:
+                    تهران , یوسف آباد , خیابان هفتم , پلاک ۲۷ , طبقه ۲ , واحد ۹ </p>
+                  <p class="description">
+                  تخصص ها :
+                    {{lawyer.areasop}} 
+                    <br><br> رزومه :
+                    {{lawyer.bio}}
+
+                    <br><br> 
+                    {{lawyer.created | timesince}}
+                    سابقه در وکیل لاین
+                   
+                  </p>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="hours">
+                        <h5>Hours</h5>
+                        <p>Monday - Friday: 07:00 AM - 13:00 PM<br>Saturday- Sunday: 09:00 AM - 15:00 PM</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="location">
+                        <h5>Location</h5>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6472.575937262724!2d51.425366438903744!3d35.79286318089899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e05de343009c7%3A0x9f66ba485b6f53c6!2sTouchal%20Juice%20Shop!5e0!3m2!1sen!2sus!4v1659014631865!5m2!1sen!2sus" border-radius:"10px" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="book now">
+                        <h5>راه های ارتباطی</h5>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">whatsApp</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="share">
+                        
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="main-button-red">
+                <a href="{{request.META.HTTP_REFERER}}">بازگشت</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2022 Ashkan Samadian All Rights Reserved. 
+          <br>Design: <a href="" target="_parent" title="free css templates">...</a></p>
+    </div>
+  </section>
+  {%  endblock content %}

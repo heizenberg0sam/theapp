@@ -1,0 +1,146 @@
+{% extends 'main-forms.html'%}
+
+{%block content%}
+{% if page == "login"%}
+<div>
+<form method="POST" action="">
+
+    {%csrf_token%}
+
+
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span><p>حساب کاربری ندارید؟</p></span>
+                  <span><a style="text-decoration: none; color:#c4a7b2" class="links" href="{% url 'register' %}"> ساخت حساب</a></span>
+                </div>
+                <div class="app-contact">شماره تماس : 021 999 2222</div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    
+                    <input type="text" name="username" placeholder="نام کاربری" class="app-form-control">
+                  </div>
+                  <div class="app-form-group">
+                    
+                    <input type="password" name="password" placeholder="رمز" class="app-form-control">
+                  </div>
+                  
+                 <button type="submit" class="app-form-button">ورود</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+   
+    
+
+
+
+
+
+
+
+</form>
+
+
+</div>
+{%else%}
+
+<div>
+<form method="POST" action="">
+
+    {%csrf_token%}
+  
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span><p>حساب کاربری دارید؟</p></span>
+                  <span><a style="text-decoration: none; color:#c4a7b2" href="{% url 'login' %}"> وارد شوید</a></span>
+                </div>
+                <div class="app-contact">شماره تماس : 021 999 2222</div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    
+                    <input placeholder="نام کاربری " type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus="" required="" id="id_username">
+                </div>
+          
+                  <div class="app-form-group">
+                    
+                    <input placeholder=" رمز ورود" type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
+                </div>
+                <div class="app-form-group">
+                    
+                    <input placeholder=" تکرار رمز ورود"  type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+                </div>
+                  
+                  
+                 <button type="submit" class="app-form-button">ساخت حساب</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+</form>
+
+
+
+</div>
+
+{%endif%}
+
+
+
+{%endblock%}
+
+
+
+
